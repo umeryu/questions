@@ -1,0 +1,43 @@
+<head>
+
+    <script type="text/javascript">
+        function dispButton(id, ques, ans) {
+            var btnName = document.getElementById(id).value;
+            if (btnName == ques) {
+                //alert('クリックしたボタン名は｢' + btnName + '｣です');
+                document.getElementById(id).value = ans;
+                document.getElementById(id).className = "btn btn-outline-primary" 
+                document.getElementById(id+"-status").value = id+"-status:OK"
+            } else {
+                document.getElementById(id).value = ques;
+                document.getElementById(id).className = "btn btn-outline-secondary btn-sm"
+                document.getElementById(id+"-status").value = id+"-status:NG"                
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous">
+        </script>
+
+</head>
+
+<body>
+    <h1>{{.PageName}}</h1>
+    {{.PageId}}   {{.PageBackImg}}
+
+    <form  method="post" >
+    {{range .Questions }}
+        <input type="button"  id="{{.Id}}"
+            value="{{if eq .Status "OK"}}{{.Answer}}{{else}}{{.Question}}{{end}}" 
+            class ="{{if eq .Status "OK"}}btn btn-outline-secondary btn-sm{{else}}btn btn-outline-primary{{end}}"
+            onclick="dispButton( {{.Id}},{{.Question}},{{.Answer}} )" 
+            style="position: absolute; left: {{.Lpx}}; top: {{.Tpx}}" >
+        <input type="text" hidden=true  id="{{.Id}}-status" name="status-info" value="{{.Id}}-status:{{.Status}}"> 
+    {{end}}
+    <input type="submit" value="保存">    
+    </form>    
+    
+
+</body>
