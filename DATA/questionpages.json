@@ -65,10 +65,10 @@
                 "statusall":6,
                 "statusok":0,
                 "statuyet":6,
-                "statuper":"0%",
-                "statusstr":["myid1-status:NG","myid2-status:NG",
-                             "myid3-status:NG","myid4-status:NG",
-                             "myid5-status:NG","myid6-status:NG"]
+                "statuper":"0",
+                "statusstr":["myid1-statusNG","myid2-statusNG",
+                             "myid3-statusNG","myid4-statusNG",
+                             "myid5-statusNG","myid6-statusNG"]
             }
         }
     ],

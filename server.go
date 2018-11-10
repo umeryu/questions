@@ -1,12 +1,15 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"html/template"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"regexp"
 	"strconv"
+	"strings"
 )
 
 type PageManager struct {
@@ -45,22 +48,27 @@ type StatusInfo struct {
 // GLOBAL VARIABLES
 // ============================================================================
 // Question Difinition
-const TOOLINFO_FILE string = "./DATA/questionpages.json"
+const QUESTIONPAGES_FILE string = "./DATA/questionpages.json"
 
-// page manager
+// page manager all data is loaded this object
 var pagemanager PageManager
 
-// current page for work
-var thispage QuestionPage
-
-// current page questions
-var messeges []*QuestionInfo
+// for get each pagedata when called view. key is pageURL(this is created by PageId).
+var pagedatamap map[string]*QuestionPage
 
 // ============================================================================
 // Each Page View Creater
 // ============================================================================
+// どのページもこの処理にくる。ページにあったデータを割り当てる必要がある.
+// 対応ページデータ(nowpage)をpageurlとのマップ情報で差し替える
 func questionView(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("method:", r.Method)
+
+	var nowPageID string = (r.RequestURI)[1:]
+	var nowpage *QuestionPage = pagedatamap[nowPageID]
+
+	//fmt.Println("url---->", nowPageID)
+	//fmt.Println("check nowpage-->:", (nowpage).PageId, (nowpage).PageName)
 
 	funcMap := template.FuncMap{
 		"statussetfunc": func(id string) string {
@@ -70,7 +78,7 @@ func questionView(w http.ResponseWriter, r *http.Request) {
 	}
 	// テンプレートをパース
 	tmpl := template.Must(template.New("tmpl").Funcs(funcMap).ParseFiles("tmpl/question.html"))
-	//tmpl := template.Must(template.ParseFiles("tmpl/hello.html"))
+	//tmpl := template.Must(template.ParseFiles("tmpl/question.html"))
 
 	if r.Method == "GET" {
 
@@ -80,38 +88,51 @@ func questionView(w http.ResponseWriter, r *http.Request) {
 
 		err := r.ParseForm()
 		if err != nil {
-			fmt.Println("form parse erro")
+			fmt.Println("form parse err")
 		}
 
-		//  id-status:OK id-status:NG の文字列を取得できる
-		thispage.Status.StatusStr = r.Form["status-info"]
-		//fmt.Println("=> ", thispage.Status.StatusStr, "len:", len(thispage.Status.StatusStr))
-		all := len(thispage.Status.StatusStr)
+		// 取り出せるフォームはtextとか、Buttonから取り出しても何もないよ
+		(*nowpage).Status.StatusStr = r.Form["status-info"]
+
+		all := len((*nowpage).Status.StatusStr)
 		okcount := 0
-		r := regexp.MustCompile("-status:OK")
+		r := regexp.MustCompile("-statusOK")
 
 		for i := 0; i < all; i++ {
-			if r.MatchString(thispage.Status.StatusStr[i]) {
+			//fmt.Println("--------> now in status check:", (*nowpage).Status.StatusStr[i])
+			var state string
+			var nowStr string = (*nowpage).Status.StatusStr[i]
+			if r.MatchString(nowStr) {
+				state = "OK"
 				okcount++
+			} else {
+				state = "NG"
+			}
+
+			idsplit := strings.Split(nowStr, "-")
+
+			//QuestionPageの各QuestionInfoのStatusをUPDATE
+			var qi *QuestionInfo //pointer出ないと上書きされない
+			// todo あとでマップに書きに書き換える
+			for i := 0; i < len((*nowpage).Questions); i++ {
+				qi = ((*nowpage).Questions)[i]
+				if qi.Id == idsplit[0] {
+					qi.Status = state
+					//fmt.Println("update state---:"+idsplit[0], ":::", qi.Status)
+					break
+				}
 			}
 		}
-		thispage.Status.ALL = all
-		thispage.Status.OK = okcount
-		thispage.Status.YET = all - okcount
-		thispage.Status.PER = strconv.FormatFloat((float64(okcount)/float64(all))*100, 'f', 2, 64)
-
-		// 現状保存し、Statusに保存
-		// 現状の表示情報を取り出す。
-		// 保存状態からデータを作り直しmessegeエンハンス
+		(*nowpage).Status.ALL = all
+		(*nowpage).Status.OK = okcount
+		(*nowpage).Status.YET = all - okcount
+		(*nowpage).Status.PER = strconv.FormatFloat((float64(okcount)/float64(all))*100, 'f', 2, 64)
 
 	}
 
-	//messegesは外部から読み込み
-	// テンプレートを描画 こっちはディレクトリ構成いらない
-	if err := tmpl.ExecuteTemplate(w, "question.html", thispage); err != nil {
+	if err := tmpl.ExecuteTemplate(w, "question.html", nowpage); err != nil {
 		log.Fatal(err)
 	}
-
 }
 
 // ============================================================================
@@ -121,79 +142,20 @@ func questionView(w http.ResponseWriter, r *http.Request) {
 // init
 //-----------------------------------------------------------------------------
 func loadPageInfo() {
-	pagemanager.PageCount = 1
-	p := make([]QuestionPage, 1)
-	pagemanager.Pages = p
-	pagemanager.Pages[0] = thispage
-	thispage.PageId = "page1"
-	thispage.PageName = "背中：僧帽筋"
-	thispage.PageBackImg = "/img/page1.png"
-	thispage.PageDisc = "僧帽筋の起点、停止点を述べよ。"
-	createQuestionInfo()
-	thispage.Questions = messeges
+	jsonStr, err := ioutil.ReadFile(QUESTIONPAGES_FILE)
+	if err != nil {
+		fmt.Printf("error:%s¥n", err)
+		return
+	}
+	jsonbytes := ([]byte)(jsonStr)
 
-}
-
-func createQuestionInfo() int {
-	var count int = 0
-	count = 6
-	messeges = make([]*QuestionInfo, count)
-	messeges[0] = &QuestionInfo{
-		"myid1",
-		"起点1 2つ",
-		"仙骨、腸骨稜",
-		"300px",
-		"450px",
-		"L",
-		"NG",
+	err = json.Unmarshal(jsonbytes, &pagemanager)
+	if err != nil {
+		fmt.Printf("error:%s¥n", err)
+		return
 	}
-	messeges[1] = &QuestionInfo{
-		"myid2",
-		"起点2　1",
-		"腰椎L1-L5",
-		"300px",
-		"400px",
-		"R",
-		"NG",
-	}
-	messeges[2] = &QuestionInfo{
-		"myid3",
-		"起点3 １つ",
-		"肋骨 9-12",
-		"310px",
-		"300px",
-		"R",
-		"NG",
-	}
-	messeges[3] = &QuestionInfo{
-		"myid4",
-		"起点4 1つ",
-		"肩甲骨下角",
-		"310px",
-		"250px",
-		"L",
-		"NG",
-	}
-	messeges[4] = &QuestionInfo{
-		"myid5",
-		"起点5 1つ",
-		"大後頭骨隆起",
-		"250px",
-		"80px",
-		"L",
-		"NG",
-	}
-	messeges[5] = &QuestionInfo{
-		"myid6",
-		"終点 3つ",
-		"肩峰、肩甲骨突起、鎖骨外側1/3",
-		"330px",
-		"200px",
-		"L",
-		"NG",
-	}
-
-	return count
+	//fmt.Println(pagemanager.Pages[0].PageName)
+	//fmt.Println(pagemanager.Pages[0].Questions[0].Question)
 }
 
 //-----------------------------------------------------------------------------
@@ -201,8 +163,25 @@ func createQuestionInfo() int {
 //-----------------------------------------------------------------------------
 func main() {
 	loadPageInfo()
-	http.HandleFunc("/q", questionView)
+	count := pagemanager.PageCount
+	fmt.Println("## Qusetion Pages = ", count, " page exist.")
+	pagedatamap = make(map[string]*QuestionPage, 1) //1は初期キャパシティ　追加により増える
+	// ハンドラ追加
+	for i := 0; i < count; i++ {
+		now := pagemanager.Pages[i]
+		pageid := now.PageId
+		//page data map作成 viewで利用
+		pagedatamap[pageid] = &(pagemanager.Pages[i])
+
+		http.HandleFunc("/"+pageid, questionView)
+		fmt.Println("## Add Page Handlers=> pageID:", pageid, " Title:", now.PageName, " as /", pageid)
+	}
+
+	// Access可能なURLを設定
 	http.Handle("/img/", http.StripPrefix("/img/", http.FileServer(http.Dir("img"))))
 
-	http.ListenAndServe(":8080", nil)
+	// Server起動
+	PORT := ":8080"
+	fmt.Println("### Server Start ### " + PORT)
+	http.ListenAndServe(PORT, nil)
 }

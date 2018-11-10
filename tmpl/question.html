@@ -6,11 +6,11 @@
                 //alert('クリックしたボタン名は｢' + btnName + '｣です');
                 document.getElementById(id).value = ans;
                 document.getElementById(id).className = "btn btn-primary" 
-                document.getElementById(id+"-status").value = id+"-status:OK"
+                document.getElementById(id+"-status").value = id+"-statusOK"
             } else {
                 document.getElementById(id).value = ques;
                 document.getElementById(id).className = "btn btn-secondary btn-sm"
-                document.getElementById(id+"-status").value = id+"-status:NG"                
+                document.getElementById(id+"-status").value = id+"-statusNG"                
             }
         }
     </script>
@@ -47,7 +47,8 @@
             class ="{{if eq .Status "NG"}}btn btn-secondary btn-sm{{else}}btn btn-primary{{end}}"
             onclick="dispButton( {{.Id}},{{.Question}},{{.Answer}} )" 
             style="position: absolute; left: {{.Lpx}}; top: {{.Tpx}}" >
-        <input type="text" hidden=true  id="{{.Id}}-status" name="status-info" value="{{.Id}}-status:{{.Status}}"> 
+
+        <input type="text" hidden=true  id="{{.Id}}-status" name="status-info" value="{{.Id}}-status{{.Status}}"> 
     {{end}}
     <div style="margin:0 auto" align=right>
     <input type="submit" value="保存" class="btn btn-outline-info">
