@@ -9,41 +9,56 @@ import (
 	"strconv"
 )
 
-type Page struct { // テンプレート展開用データ構造
-	Title string
-	Count int
+type PageManager struct {
+	Pages     []QuestionPage `json:"pages"`
+	PageCount int            `json:"pagecount"`
 }
 
 type QuestionPage struct {
-	PageId      string
-	PageName    string
-	PageDisc    string
-	PageBackImg string
-	Questions   []*QuestionInfo
-	Status      StatusInfo
-}
-
-type StatusInfo struct {
-	ALL       int
-	OK        int
-	YET       int
-	PER       string
-	StatusStr []string
+	PageId      string          `json:"pageid"`
+	PageName    string          `json:"pagename"`
+	PageDisc    string          `json:"pagendisc"`
+	PageBackImg string          `json:"pagebackimg"`
+	Questions   []*QuestionInfo `json:"questions"`
+	Status      StatusInfo      `json:"statusinfo"`
 }
 
 type QuestionInfo struct { // テンプレート展開用データ構造
-	Id       string
-	Question string
-	Answer   string
-	Lpx      string
-	Tpx      string
-	Rpos     string
-	Status   string
+	Id       string `json:"id"`
+	Question string `json:"question"`
+	Answer   string `json:"answer"`
+	Lpx      string `json:"lpx"`
+	Tpx      string `json:"tpx"`
+	Rpos     string `json:"rpos"`
+	Status   string `json:"status"`
 }
 
+type StatusInfo struct {
+	ALL       int      `json:"statusall"`
+	OK        int      `json:"statusok"`
+	YET       int      `json:"statuyet"`
+	PER       string   `json:"statuper"`
+	StatusStr []string `json:"statusstr"`
+}
+
+// ============================================================================
+// GLOBAL VARIABLES
+// ============================================================================
+// Question Difinition
+const TOOLINFO_FILE string = "./DATA/questionpages.json"
+
+// page manager
+var pagemanager PageManager
+
+// current page for work
 var thispage QuestionPage
+
+// current page questions
 var messeges []*QuestionInfo
 
+// ============================================================================
+// Each Page View Creater
+// ============================================================================
 func questionView(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("method:", r.Method)
 
@@ -60,6 +75,7 @@ func questionView(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "GET" {
 
 	} else {
+		// POST 保存処理
 		fmt.Println("in POST ")
 
 		err := r.ParseForm()
@@ -98,10 +114,17 @@ func questionView(w http.ResponseWriter, r *http.Request) {
 
 }
 
+// ============================================================================
+// Main
+// ============================================================================
 //-----------------------------------------------------------------------------
 // init
 //-----------------------------------------------------------------------------
 func loadPageInfo() {
+	pagemanager.PageCount = 1
+	p := make([]QuestionPage, 1)
+	pagemanager.Pages = p
+	pagemanager.Pages[0] = thispage
 	thispage.PageId = "page1"
 	thispage.PageName = "背中：僧帽筋"
 	thispage.PageBackImg = "/img/page1.png"
