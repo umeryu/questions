@@ -1,9 +1,11 @@
 {
+	"title": "筋肉の始点・停止点の学習",
+	"desc": "Welcom! さあ、始点、停止点を暗記しよう!",
 	"pages": [
 		{
 			"pageid": "page1",
 			"pagename": "背中：僧帽筋",
-			"pagendisc": "僧帽筋の起点、停止点を述べよ。",
+			"pagendesc": "僧帽筋の起点、停止点を述べよ。",
 			"pagebackimg": "/img/page1.png",
 			"questions": [
 				{
@@ -13,7 +15,7 @@
 					"lpx": "300px",
 					"tpx": "450px",
 					"rpos": "L",
-					"status": "NG"
+					"status": "OK"
 				},
 				{
 					"id": "myid2",
@@ -31,7 +33,7 @@
 					"lpx": "310px",
 					"tpx": "300px",
 					"rpos": "L",
-					"status": "OK"
+					"status": "NG"
 				},
 				{
 					"id": "myid4",
@@ -58,28 +60,28 @@
 					"lpx": "330px",
 					"tpx": "200px",
 					"rpos": "L",
-					"status": "NG"
+					"status": "OK"
 				}
 			],
 			"statusinfo": {
 				"statusall": 6,
-				"statusok": 4,
-				"statuyet": 2,
-				"statuper": "66.67",
+				"statusok": 5,
+				"statuyet": 1,
+				"statuper": "83.33",
 				"statusstr": [
-					"myid1-statusNG",
+					"myid1-statusOK",
 					"myid2-statusOK",
-					"myid3-statusOK",
+					"myid3-statusNG",
 					"myid4-statusOK",
 					"myid5-statusOK",
-					"myid6-statusNG"
+					"myid6-statusOK"
 				]
 			}
 		},
 		{
 			"pageid": "page2",
 			"pagename": "背中：広背筋",
-			"pagendisc": "広背筋の起点、停止点を述べよ。",
+			"pagendesc": "広背筋の起点、停止点を述べよ。",
 			"pagebackimg": "/img/page1.png",
 			"questions": [
 				{
@@ -116,7 +118,7 @@
 					"lpx": "310px",
 					"tpx": "250px",
 					"rpos": "L",
-					"status": "NG"
+					"status": "OK"
 				},
 				{
 					"id": "myid5",
@@ -130,18 +132,25 @@
 			],
 			"statusinfo": {
 				"statusall": 5,
-				"statusok": 4,
-				"statuyet": 1,
-				"statuper": "80.00",
+				"statusok": 5,
+				"statuyet": 0,
+				"statuper": "100.00",
 				"statusstr": [
 					"myid1-statusOK",
 					"myid2-statusOK",
 					"myid3-statusOK",
-					"myid4-statusNG",
+					"myid4-statusOK",
 					"myid5-statusOK"
 				]
 			}
 		}
 	],
-	"pagecount": 2
+	"pagecount": 2,
+	"totalstatusinfo": {
+		"statusall": 2,
+		"statusok": 0,
+		"statuyet": 1,
+		"statuper": "0.00",
+		"statusstr": []
+	}
 }

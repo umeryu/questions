@@ -14,14 +14,17 @@ import (
 )
 
 type PageManager struct {
-	Pages     []QuestionPage `json:"pages"`
-	PageCount int            `json:"pagecount"`
+	Title       string         `json:"title"`
+	Desc        string         `json:"desc"`
+	Pages       []QuestionPage `json:"pages"`
+	PageCount   int            `json:"pagecount"`
+	TotalStatus StatusInfo     `json:"totalstatusinfo"`
 }
 
 type QuestionPage struct {
 	PageId      string          `json:"pageid"`
 	PageName    string          `json:"pagename"`
-	PageDisc    string          `json:"pagendisc"`
+	PageDesc    string          `json:"pagendesc"`
 	PageBackImg string          `json:"pagebackimg"`
 	Questions   []*QuestionInfo `json:"questions"`
 	Status      StatusInfo      `json:"statusinfo"`
@@ -139,6 +142,33 @@ func questionView(w http.ResponseWriter, r *http.Request) {
 }
 
 // ============================================================================
+// Top Page View Creater
+// ============================================================================
+func topView(w http.ResponseWriter, r *http.Request) {
+	// テンプレートをパース
+	tmpl := template.Must(template.ParseFiles("tmpl/top.html"))
+
+	//status 更新
+	pagemanager.TotalStatus.ALL = pagemanager.PageCount
+	var okcount int = 0
+	for i := 0; i < len(pagemanager.Pages); i++ {
+		if (pagemanager.Pages[i]).Status.PER == "100.00" {
+			okcount++
+		}
+	}
+	pagemanager.TotalStatus.OK = okcount
+	pagemanager.TotalStatus.PER = strconv.FormatFloat((float64(okcount)/float64(pagemanager.PageCount))*100, 'f', 2, 64)
+
+	if r.Method == "GET" {
+
+	} else {
+	}
+	if err := tmpl.ExecuteTemplate(w, "top.html", pagemanager); err != nil {
+		log.Fatal(err)
+	}
+}
+
+// ============================================================================
 // Main
 // ============================================================================
 //-----------------------------------------------------------------------------
@@ -187,7 +217,11 @@ func main() {
 	count := pagemanager.PageCount
 	fmt.Println("## Qusetion Pages = ", count, " page exist.")
 	pagedatamap = make(map[string]*QuestionPage, 1) //1は初期キャパシティ　追加により増える
-	// ハンドラ追加
+
+	// Topハンドラ追加
+	http.HandleFunc("/top", topView)
+	fmt.Println("## Add Page Handlers=> top")
+	// Pageハンドラ追加
 	for i := 0; i < count; i++ {
 		now := pagemanager.Pages[i]
 		pageid := now.PageId

@@ -1,0 +1,55 @@
+<head>
+    <script type="text/javascript">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous">
+        </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1>{{.Title}}</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h5>{{.Desc}}</h5>
+            </div>
+        </div>
+         <div class="row">
+            <div align="left" class="col-lg-6">
+                <h6>
+                    全ページ数: {{.TotalStatus.ALL}}page
+                    <span class="text-primary"> 完了ページ数: {{.TotalStatus.OK}}page</span>
+                     <span class="bg-info text-white"> 達成率:{{.TotalStatus.PER}}%</span>
+                </h6>  
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-lg-10">
+                <table class="table table-hover">
+                    <thead>
+                        <td></td><td></td><td>名称</td><td>概要</td>
+                        <td>ALL</td><td>OK</td><td>達成率</td>
+                    </thead>
+                {{range .Pages}}
+                    <tr>
+                        <td>{{if eq .Status.PER  "100.00"}}<input type="checkbox" checked=true disabled=true　>{{else}}<input type="checkbox" disabled=true>{{end}}</td>
+                        <td><a href="{{.PageId}}">{{.PageId}}</a></td><td align="left">{{.PageName}}</td><td align="left">{{.PageDesc}}</td>
+                        <td>{{.Status.ALL}}</td><td>{{.Status.OK}}</td><td>{{.Status.PER}}</td>
+                    </tr>
+                {{end}}
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    </div>
+</body>

@@ -9,16 +9,15 @@
 
 ## TODO
 - [x] ボタン表示の切り替え、簡易位置設定
-- [ ] 既存Status表示 
+- [x] 既存Status表示 
 
-- [ ] 保存タイミングのStatsuオブジェクト変更
-- [ ] Statusオブジェクトの永続化
-- [ ] User情報の作成、永続化
-- [ ] 初期読み込み表示　アプリのハードコード
-- [ ] 保存後の再読み込み
-- [ ] 初期読み込み表示　永続化からの読み込み
-
+- [x] 保存タイミングのStatsuオブジェクト変更
+- [x] Statusオブジェクトの永続化
+- [x] 保存後の再読み込み
+- [x] 初期読み込み表示　永続化からの読み込み
+- [ ] top pageの作成
+- [ ] User情報の作成,映像化
 
 ## 
-- POST request.ParsePost は、初期値の値を取り出す。初期値設定がtemplateになっているとnilとなる。
-- 
+- POST request.ParsePost で hidden inputのstatus-infoに id-statusOK, id-statusNGで各質問の現状を保持
+
