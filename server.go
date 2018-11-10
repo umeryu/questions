@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 	"regexp"
 	"strconv"
 	"strings"
@@ -49,6 +50,7 @@ type StatusInfo struct {
 // ============================================================================
 // Question Difinition
 const QUESTIONPAGES_FILE string = "./DATA/questionpages.json"
+const QUESTIONPAGES_BAKUP_FILE string = "./DATA/questionpages.backup.json"
 
 // page manager all data is loaded this object
 var pagemanager PageManager
@@ -71,9 +73,10 @@ func questionView(w http.ResponseWriter, r *http.Request) {
 	//fmt.Println("check nowpage-->:", (nowpage).PageId, (nowpage).PageName)
 
 	funcMap := template.FuncMap{
-		"statussetfunc": func(id string) string {
-			fmt.Println(id)
-			return id
+		"savefunc": func() string {
+			fmt.Println("保存が呼ばれたよ!")
+			savePageInfo()
+			return "OK"
 		},
 	}
 	// テンプレートをパース
@@ -156,6 +159,24 @@ func loadPageInfo() {
 	}
 	//fmt.Println(pagemanager.Pages[0].PageName)
 	//fmt.Println(pagemanager.Pages[0].Questions[0].Question)
+}
+func savePageInfo() {
+
+	jsonBytes, err := json.MarshalIndent(pagemanager, "", "	")
+
+	if err != nil {
+		fmt.Println("JSON Marshal error:", err)
+		return
+	}
+
+	err2 := ioutil.WriteFile(QUESTIONPAGES_FILE, jsonBytes, os.ModePerm)
+	if err2 != nil {
+		fmt.Printf("error:%s¥n", err2)
+		return
+	} else {
+		fmt.Println("## file saved to :", QUESTIONPAGES_FILE)
+	}
+
 }
 
 //-----------------------------------------------------------------------------
