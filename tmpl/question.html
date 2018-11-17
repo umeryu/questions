@@ -1,16 +1,39 @@
 <head>
     <script type="text/javascript">
-        function dispButton(id, ques, ans) {
+        function dispButton(id, ques, ans,ckind1,ckind2) {
             var btnName = document.getElementById(id).value;
+            var cStr1 = "btn-primary";
+            var cStr2 = "btn-secondary";            
+            switch (ckind1){
+                case "0":
+                    cStr1 = "btn-primary";
+                    break;
+                case "1":
+                    cStr1 = "btn-danger";
+                    break;
+                default:
+                    cStr1 = "btn-secondary";
+            }
+            switch (ckind2){
+                case "0":
+                    cStr2 = "btn-secondary";
+                    break;
+                case "1":
+                    cStr2 = "btn-outline-danger";
+                    break;
+                default:
+                    cStr2 = "btn-secondary";
+            }
+
             if (btnName == ques) {
                 //alert('クリックしたボタン名は｢' + btnName + '｣です');
                 document.getElementById(id).value = ans;
-                document.getElementById(id).className = "btn btn-primary" 
-                document.getElementById(id+"-status").value = id+"-statusOK"
+                document.getElementById(id).className = "btn "+cStr1;
+                document.getElementById(id+"-status").value = id+"-statusOK";
             } else {
                 document.getElementById(id).value = ques;
-                document.getElementById(id).className = "btn btn-secondary btn-sm"
-                document.getElementById(id+"-status").value = id+"-statusNG"                
+                document.getElementById(id).className = "btn btn-sm "+cStr2;
+                document.getElementById(id+"-status").value = id+"-statusNG";
             }
         }
 
@@ -52,12 +75,29 @@
             <form  method="post" >
             {{range .Questions }}
                 <input type="button"  id="{{.Id}}"
-                    value="{{if eq .Status "OK"}}{{.Answer}}{{else}}{{.Question}}{{end}}" 
-                    class ="{{if eq .Status "NG"}}btn btn-secondary btn-sm{{else}}btn btn-primary{{end}}"
-                    onclick="dispButton( {{.Id}},{{.Question}},{{.Answer}} )" 
+                    value="{{if eq .Status "OK"}}{{.Answer}}{{else}}{{.Question}}{{end}}"
+                    class ="{{if eq .Status "NG"}}
+                                {{if eq .Ckind2 "0"}}
+                                    btn btn-secondary btn-sm
+                                {{else if eq .Ckind2 "1"}}
+                                    btn btn-outline-danger btn-sm
+                                {{else}}
+                                    btn btn-secondary btn-sm
+                                {{end}}                   
+                            {{else}}
+                                 {{if eq .Ckind1 "0"}}
+                                    btn btn-primary
+                                 {{else if eq .Ckind1 "1"}}
+                                    btn btn-danger
+                                 {{else}}
+                                    btn btn-secondary
+                                 {{end}}
+                            {{end}}"
+                    onclick="dispButton( {{.Id}},{{.Question}},{{.Answer}},{{.Ckind1}},{{.Ckind2}})" 
                     style="position: absolute; left: {{.Lpx}}; top: {{.Tpx}}" >
 
                 <input type="text" hidden=true  id="{{.Id}}-status" name="status-info" value="{{.Id}}-status{{.Status}}"> 
+
             {{end}}
         <div style="margin:0 auto" align=right>
                 <input type="submit" value="保存" class="btn btn-outline-info">
@@ -79,6 +119,13 @@
             {{/*.PageId */}}   {{/*.PageBackImg */}}
         </div>
     </div>  
+    <div>
+        <div class="col-md-6">
+            {{range $val := .Comments}}
+                <h6><span class="test-primary">{{$val}}</span></h6>
+            {{end}}
+        </div>
+    </div>
 </div>    
 
 </body>

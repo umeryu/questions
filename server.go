@@ -28,6 +28,7 @@ type QuestionPage struct {
 	PageBackImg string          `json:"pagebackimg"`
 	Questions   []*QuestionInfo `json:"questions"`
 	Status      StatusInfo      `json:"statusinfo"`
+	Comments    []string        `json:"comments"`
 }
 
 type QuestionInfo struct { // テンプレート展開用データ構造
@@ -36,8 +37,10 @@ type QuestionInfo struct { // テンプレート展開用データ構造
 	Answer   string `json:"answer"`
 	Lpx      string `json:"lpx"`
 	Tpx      string `json:"tpx"`
-	Rpos     string `json:"rpos"`
-	Status   string `json:"status"`
+	Ckind1   string `json:"ckind1"`
+	Ckind2   string `json:"ckind2"`
+
+	Status string `json:"status"`
 }
 
 type StatusInfo struct {

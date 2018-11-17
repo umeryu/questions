@@ -14,7 +14,8 @@
 					"answer": "外後頭隆起",
 					"lpx": "220px",
 					"tpx": "120px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "OK"
 				},
 				{
@@ -23,7 +24,8 @@
 					"answer": "項靭帯",
 					"lpx": "220px",
 					"tpx": "160px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "OK"
 				},
 				{
@@ -32,7 +34,8 @@
 					"answer": "(1)肩甲棘,(2)肩峰,(3)鎖骨外側1/3",
 					"lpx": "360px",
 					"tpx": "270px",
-					"rpos": "L",
+					"ckind1": "1",
+					"ckind2": "1",
 					"status": "OK"
 				},
 				{
@@ -41,22 +44,27 @@
 					"answer": "(1)全胸椎, (2)C7棘突起",
 					"lpx": "220px",
 					"tpx": "410px",
-					"rpos": "L",
-					"status": "OK"
+					"ckind1": "0",
+					"ckind2": "0",
+					"status": "NG"
 				}
 			],
 			"statusinfo": {
 				"statusall": 4,
-				"statusok": 4,
-				"statuyet": 0,
-				"statuper": "100.00",
+				"statusok": 3,
+				"statuyet": 1,
+				"statuper": "75.00",
 				"statusstr": [
 					"myid1-statusOK",
 					"myid2-statusOK",
 					"myid3-statusOK",
-					"myid4-statusOK"
+					"myid4-statusNG"
 				]
-			}
+			},
+			"comments": [
+				"hi",
+				"hihi"
+			]
 		},
 		{
 			"pageid": "th2",
@@ -70,7 +78,8 @@
 					"answer": "(1)仙骨, (2)腸骨稜",
 					"lpx": "280px",
 					"tpx": "450px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "OK"
 				},
 				{
@@ -79,7 +88,8 @@
 					"answer": "(1) T7-L5の棘突起",
 					"lpx": "260px",
 					"tpx": "380px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "OK"
 				},
 				{
@@ -88,7 +98,8 @@
 					"answer": "(1) 第9-12肋骨",
 					"lpx": "310px",
 					"tpx": "310px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "OK"
 				},
 				{
@@ -97,7 +108,8 @@
 					"answer": "(1)肩甲骨下角",
 					"lpx": "250px",
 					"tpx": "200px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "OK"
 				},
 				{
@@ -106,7 +118,8 @@
 					"answer": "(1)小結節稜（うらにある)",
 					"lpx": "340px",
 					"tpx": "150px",
-					"rpos": "L",
+					"ckind1": "1",
+					"ckind2": "1",
 					"status": "OK"
 				}
 			],
@@ -122,7 +135,8 @@
 					"myid4-statusOK",
 					"myid5-statusOK"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "th3",
@@ -136,7 +150,8 @@
 					"answer": "(1)C1-c4横突起",
 					"lpx": "280px",
 					"tpx": "100px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "OK"
 				},
 				{
@@ -145,7 +160,8 @@
 					"answer": "(1)肩甲骨上角",
 					"lpx": "300px",
 					"tpx": "180px",
-					"rpos": "L",
+					"ckind1": "1",
+					"ckind2": "1",
 					"status": "OK"
 				}
 			],
@@ -158,7 +174,8 @@
 					"myid1-statusOK",
 					"myid2-statusOK"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "th4",
@@ -172,7 +189,8 @@
 					"answer": "(1)C6.C7棘突起",
 					"lpx": "230px",
 					"tpx": "170px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "OK"
 				},
 				{
@@ -181,7 +199,8 @@
 					"answer": "(1)肩甲骨内側の上方",
 					"lpx": "310px",
 					"tpx": "220px",
-					"rpos": "L",
+					"ckind1": "1",
+					"ckind2": "1",
 					"status": "OK"
 				}
 			],
@@ -194,7 +213,8 @@
 					"myid1-statusOK",
 					"myid2-statusOK"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "th5",
@@ -208,7 +228,8 @@
 					"answer": "(1)T1-T4棘突起",
 					"lpx": "240px",
 					"tpx": "200px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "OK"
 				},
 				{
@@ -217,7 +238,8 @@
 					"answer": "(1)肩甲骨の内側縁",
 					"lpx": "300px",
 					"tpx": "260",
-					"rpos": "L",
+					"ckind1": "1",
+					"ckind2": "1",
 					"status": "OK"
 				}
 			],
@@ -230,7 +252,8 @@
 					"myid1-statusOK",
 					"myid2-statusOK"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "th6",
@@ -244,7 +267,8 @@
 					"answer": "(1)C5-T2棘突起,(2)項靭帯",
 					"lpx": "240px",
 					"tpx": "180px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -253,7 +277,8 @@
 					"answer": "(1)第2-5肋骨",
 					"lpx": "260px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "1",
+					"ckind2": "1",
 					"status": "NG"
 				}
 			],
@@ -266,7 +291,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "th7",
@@ -280,7 +306,8 @@
 					"answer": "(1)T10-L2棘突起",
 					"lpx": "240px",
 					"tpx": "400px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -289,7 +316,8 @@
 					"answer": "(1)第9-12肋骨",
 					"lpx": "300px",
 					"tpx": "450px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -302,7 +330,11 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": [
+				"hi",
+				"hihihi"
+			]
 		},
 		{
 			"pageid": "th8",
@@ -316,7 +348,8 @@
 					"answer": "(1)乳様突起",
 					"lpx": "240px",
 					"tpx": "100px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -325,7 +358,8 @@
 					"answer": "(1)C1-C2横突起",
 					"lpx": "240px",
 					"tpx": "130px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -334,7 +368,8 @@
 					"answer": "(1)C4-C7棘突起",
 					"lpx": "280px",
 					"tpx": "200px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -343,7 +378,8 @@
 					"answer": "(1)T1-T5棘突起",
 					"lpx": "280px",
 					"tpx": "230px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -358,7 +394,8 @@
 					"myid3-statusNG",
 					"myid4-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "th9",
@@ -372,7 +409,8 @@
 					"answer": "(1)上位の棘突起",
 					"lpx": "240px",
 					"tpx": "120px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -381,7 +419,8 @@
 					"answer": "(1)棘突起,(2)肋骨",
 					"lpx": "200px",
 					"tpx": "270px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -390,7 +429,8 @@
 					"answer": "(1)肋骨",
 					"lpx": "220px",
 					"tpx": "320px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -399,7 +439,8 @@
 					"answer": "(1)仙骨背面,(2)腸骨稜,(3)下部腰椎棘突起",
 					"lpx": "260px",
 					"tpx": "450px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -412,7 +453,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "th10",
@@ -426,7 +468,8 @@
 					"answer": "(1)半棘筋,(2)多裂筋,(3)回旋筋　横突起から棘突起に向かう筋肉",
 					"lpx": "200px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -439,7 +482,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "th11",
@@ -453,7 +497,8 @@
 					"answer": "(1)C1後結節",
 					"lpx": "290px",
 					"tpx": "240px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -462,7 +507,8 @@
 					"answer": "(1) 後頭骨下項線の内側",
 					"lpx": "300px",
 					"tpx": "150px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -475,7 +521,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "th12",
@@ -489,7 +536,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "320px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -498,7 +546,8 @@
 					"answer": "(1) 後頭骨下項線の外側",
 					"lpx": "310px",
 					"tpx": "150px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -511,7 +560,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "th13",
@@ -525,7 +575,8 @@
 					"answer": "(1)C1横突起",
 					"lpx": "320px",
 					"tpx": "240px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "OK"
 				},
 				{
@@ -534,7 +585,8 @@
 					"answer": "(1) 大後頭骨直筋の停止位置の外側",
 					"lpx": "320px",
 					"tpx": "150px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "OK"
 				}
 			],
@@ -547,7 +599,8 @@
 					"myid1-statusOK",
 					"myid2-statusOK"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "th14",
@@ -561,7 +614,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -570,7 +624,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -583,7 +638,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "js1",
@@ -597,7 +653,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -606,7 +663,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -619,7 +677,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "js2",
@@ -633,7 +692,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -642,7 +702,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -655,7 +716,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "js3",
@@ -669,7 +731,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -678,7 +741,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -691,7 +755,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "js4",
@@ -705,7 +770,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -714,7 +780,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -727,7 +794,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "js5",
@@ -741,7 +809,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -750,7 +819,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -763,7 +833,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "js6",
@@ -777,7 +848,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -786,7 +858,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -799,7 +872,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jw1",
@@ -813,7 +887,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -822,7 +897,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -835,7 +911,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jw2",
@@ -849,7 +926,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -858,7 +936,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -871,7 +950,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jw3",
@@ -885,7 +965,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -894,7 +975,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -907,7 +989,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jw4",
@@ -921,7 +1004,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -930,7 +1014,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -943,7 +1028,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jw5",
@@ -957,7 +1043,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -966,7 +1053,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -979,7 +1067,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz1",
@@ -993,7 +1082,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1002,7 +1092,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1015,7 +1106,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz2",
@@ -1029,7 +1121,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1038,7 +1131,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1051,7 +1145,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz3",
@@ -1065,7 +1160,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1074,7 +1170,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1087,7 +1184,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz4",
@@ -1101,7 +1199,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1110,7 +1209,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1123,7 +1223,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz5",
@@ -1137,7 +1238,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1146,7 +1248,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1159,7 +1262,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz6",
@@ -1173,7 +1277,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1182,7 +1287,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1195,7 +1301,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz7",
@@ -1209,7 +1316,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1218,7 +1326,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1231,7 +1340,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz8",
@@ -1245,7 +1355,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1254,7 +1365,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1267,7 +1379,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz9",
@@ -1281,7 +1394,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1290,7 +1404,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1303,7 +1418,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz10",
@@ -1317,7 +1433,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1326,7 +1443,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1339,7 +1457,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz11",
@@ -1353,7 +1472,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1362,7 +1482,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1375,7 +1496,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz12",
@@ -1389,7 +1511,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1398,7 +1521,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1411,7 +1535,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz13",
@@ -1425,7 +1550,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1434,7 +1560,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1447,7 +1574,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz14",
@@ -1461,7 +1589,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1470,7 +1599,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1483,7 +1613,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz15",
@@ -1497,7 +1628,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1506,7 +1638,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1519,7 +1652,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz16",
@@ -1533,7 +1667,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1542,7 +1677,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1555,7 +1691,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz17",
@@ -1569,7 +1706,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1578,7 +1716,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1591,7 +1730,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz18",
@@ -1605,7 +1745,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1614,7 +1755,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1627,7 +1769,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jz19",
@@ -1641,7 +1784,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1650,7 +1794,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1663,7 +1808,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jt1",
@@ -1677,7 +1823,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1686,7 +1833,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1699,7 +1847,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jt2",
@@ -1713,7 +1862,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1722,7 +1872,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1735,7 +1886,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jt3",
@@ -1749,7 +1901,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1758,7 +1911,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1771,7 +1925,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jt4",
@@ -1785,7 +1940,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1794,7 +1950,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1807,7 +1964,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jt5",
@@ -1821,7 +1979,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1830,7 +1989,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1843,7 +2003,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jt6",
@@ -1857,7 +2018,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1866,7 +2028,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1879,7 +2042,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jt7",
@@ -1893,7 +2057,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1902,7 +2067,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1915,7 +2081,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jt8",
@@ -1929,7 +2096,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1938,7 +2106,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1951,7 +2120,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jt9",
@@ -1965,7 +2135,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -1974,7 +2145,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -1987,7 +2159,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jt10",
@@ -2001,7 +2174,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -2010,7 +2184,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -2023,7 +2198,8 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		},
 		{
 			"pageid": "jt11",
@@ -2037,7 +2213,8 @@
 					"answer": "(1)C2棘突起",
 					"lpx": "300px",
 					"tpx": "300px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				},
 				{
@@ -2046,7 +2223,8 @@
 					"answer": "(1) C1横突起の後部",
 					"lpx": "300px",
 					"tpx": "260px",
-					"rpos": "L",
+					"ckind1": "0",
+					"ckind2": "0",
 					"status": "NG"
 				}
 			],
@@ -2059,15 +2237,16 @@
 					"myid1-statusNG",
 					"myid2-statusNG"
 				]
-			}
+			},
+			"comments": null
 		}
 	],
 	"pagecount": 55,
 	"totalstatusinfo": {
 		"statusall": 55,
-		"statusok": 6,
+		"statusok": 5,
 		"statuyet": 1,
-		"statuper": "10.91",
+		"statuper": "9.09",
 		"statusstr": []
 	}
 }
